@@ -16,5 +16,9 @@ namespace MarvellousPoker.Controllers.Adjuvants
                 null => throw new NullReferenceException(Format(EXCEPTION_MESSAGE, message)),
                 not null => adjacentType
             };
+
+        internal static T MightBeNullOrDefault<T>(this T adjacentType,
+                                                  Func<T, T> func,
+                                                  string message) => func.MightBeNullOrDefault(message)(adjacentType);
     }
 }
