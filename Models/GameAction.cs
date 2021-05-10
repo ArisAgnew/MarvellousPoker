@@ -10,6 +10,6 @@ namespace MarvellousPoker.Models
         FLOP = 2,
         TURN = 4,
         RIVER = 8,
-        ENDGAME = 16
+        SHOWDOWN = 16
     }
 }
