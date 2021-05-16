@@ -16,22 +16,13 @@ namespace MarvellousPoker.Controllers.Adjuvants
         {
             ForegroundColor = consoleColor;
 
-            if (line) Write($"{type}; ");
-            else
+            switch ((line, leftLine, rightLine))
             {
-                if (leftLine && rightLine == default)
-                {
-                    WriteLine($"\n{type}");
-                }
-                else if (rightLine && leftLine == default)
-                {
-                    WriteLine($"{type}\n");
-                }
-                else if ((leftLine && rightLine) != default)
-                {
-                    WriteLine($"\n{type}\n");
-                }
-                else WriteLine(type);
+                case (true, false, false): Write($"{type}; "); break;
+                case (false, true, false): WriteLine($"\n{type}"); break;
+                case (false, false, true): WriteLine($"{type}\n"); break;
+                case (false, true, true): WriteLine($"\n{type}\n"); break;
+                default: WriteLine(type); break;
             }
 
             ResetColor();
