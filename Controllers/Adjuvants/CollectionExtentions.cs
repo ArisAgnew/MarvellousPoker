@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using static System.ConsoleColor;
+
 namespace MarvellousPoker.Controllers.Adjuvants
 {
     internal static class CollectionExtentions
@@ -19,7 +21,7 @@ namespace MarvellousPoker.Controllers.Adjuvants
                 {
                     ($"An error occurred while making a collection empty.\n" +
                     $"\tCause: {e.Message}.\n" +
-                    $"\tTargetSite: {e.TargetSite}\n").Depict();
+                    $"\tTargetSite: {e.TargetSite}\n").Depict(Red);
                 }
             }
             return collection;
