@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace MarvellousPoker.Controllers.Adjuvants
@@ -10,7 +11,16 @@ namespace MarvellousPoker.Controllers.Adjuvants
         {
             if (collection.Any() && collection is not null)
             {
-                collection.Clear();
+                try
+                {
+                    collection.Clear();
+                }
+                catch (Exception e) when (e is NotSupportedException)
+                {
+                    ($"An error occurred while making a collection empty.\n" +
+                    $"\tCause: {e.Message}.\n" +
+                    $"\tTargetSite: {e.TargetSite}\n").Depict();
+                }
             }
             return collection;
         }
