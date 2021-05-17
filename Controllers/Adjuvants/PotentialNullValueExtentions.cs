@@ -5,7 +5,7 @@ using static System.String;
 
 namespace MarvellousPoker.Controllers.Adjuvants
 {
-    internal static class NullValueExtentions
+    internal static class PotentialNullValueExtentions
     {
         private static readonly string EXCEPTION_MESSAGE = "{0} has null value.";
 
@@ -13,7 +13,7 @@ namespace MarvellousPoker.Controllers.Adjuvants
             adjacentType switch
             {
                 T when EqualityComparer<T>.Default.Equals(adjacentType, default) => default,
-                null => throw new NullReferenceException(Format(EXCEPTION_MESSAGE, message)),
+                null => throw new ArgumentNullException(Format(EXCEPTION_MESSAGE, message)),
                 not null => adjacentType
             };
 
