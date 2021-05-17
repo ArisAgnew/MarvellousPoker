@@ -8,7 +8,7 @@ namespace MarvellousPoker.Controllers.Adjuvants
 {
     internal static class CollectionExtentions
     {
-        internal static ICollection<T> OughtToBeEmpty<T>(this ICollection<T> collection)
+        internal static IEnumerable<T> OughtToBeEmpty<T>(this ICollection<T> collection)
             where T : notnull
         {
             if (collection.Any() && collection is not null)
