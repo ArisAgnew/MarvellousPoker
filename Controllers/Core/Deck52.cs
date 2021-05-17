@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 
 using MarvellousPoker.Controllers.Adjuvants;
+using MarvellousPoker.Meta.CustomExceptions;
 using MarvellousPoker.Models;
 using MarvellousPoker.Models.Abstractions;
 
@@ -18,7 +19,9 @@ namespace MarvellousPoker.Controllers.Core
     {
         private static readonly ushort FIFTY_TWO = 52;
 
-        private List<Card> _cards = new(FIFTY_TWO);
+        private readonly List<Card> _cards = new(FIFTY_TWO);
+
+        private int cardIndex;
 
         public ReadOnlyCollection<Card> Cards => _cards?.AsReadOnly();
 
@@ -41,6 +44,7 @@ namespace MarvellousPoker.Controllers.Core
         {
             Deck52Guid = NewGuid();
             Deal();
+            cardIndex = _cards.Count;
         }
 
         //Shuffled deck
@@ -55,9 +59,17 @@ namespace MarvellousPoker.Controllers.Core
             .Select(tuple => new Card(tuple))
             .ToImmutableList();
 
+        //Beta
         public Card GetNextCard()
         {
-            throw new NotImplementedException(); //todo: 5/17/2021
+            switch (cardIndex)
+            {
+                case int index when index is not default(int) and > 0:
+                    --cardIndex;
+                    var card = _cards[cardIndex];
+                    return card;
+                default: throw new GameGeneralException("The deck has no cards of any kind."); break;
+            }
         }
 
         //Unshuffled deck
