@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
+using MarvellousPoker.Controllers.Adjuvants;
+
 namespace MarvellousPoker.Meta.CustomExceptions
 {
     /*
@@ -30,10 +32,12 @@ namespace MarvellousPoker.Meta.CustomExceptions
 
         public GameGeneralException(string message) : base(message)
         {
+            _gameExceptionMessage = message.MightBeNullOrDefault();
         }
 
         public GameGeneralException(string message, Exception innerException) : base(message, innerException)
         {
+            _gameExceptionMessage = message.MightBeNullOrDefault();
         }
 
         protected GameGeneralException(SerializationInfo info, StreamingContext context) : base(info, context)
