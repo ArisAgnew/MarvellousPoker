@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using static System.ConsoleColor;
-
-namespace MarvellousPoker.Controllers.Adjuvants
+﻿namespace MarvellousPoker.Controllers.Adjuvants
 {
     internal static class CollectionExtentions
     {

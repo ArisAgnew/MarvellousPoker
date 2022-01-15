@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MarvellousPoker.Models
+﻿namespace MarvellousPoker.Models
 {
     [Flags]
     public enum GameAction : ushort

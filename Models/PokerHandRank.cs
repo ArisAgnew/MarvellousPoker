@@ -1,8 +1,4 @@
-﻿using System;
-
-using MarvellousPoker.Controllers.Adjuvants;
-
-namespace MarvellousPoker.Models
+﻿namespace MarvellousPoker.Models
 {
     [Flags]
     public enum PokerHandRank : ushort

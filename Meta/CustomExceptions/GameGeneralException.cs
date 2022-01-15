@@ -1,9 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
-
-using MarvellousPoker.Controllers.Adjuvants;
-
-namespace MarvellousPoker.Meta.CustomExceptions
+﻿namespace MarvellousPoker.Meta.CustomExceptions
 {
     /*
      * При обработке исключения, производного от System.ApplicationException, можно смело предполагать, 

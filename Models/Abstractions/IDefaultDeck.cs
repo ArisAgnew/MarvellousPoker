@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace MarvellousPoker.Models
+﻿namespace MarvellousPoker.Models
 {
     public interface IDefaultDeck<out T>
     {

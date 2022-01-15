@@ -1,10 +1,4 @@
-﻿using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
-
-using static System.Console;
-
-namespace MarvellousPoker.Controllers.Adjuvants
+﻿namespace MarvellousPoker.Controllers.Adjuvants
 {
     internal static class AttributeFunctioning
     {
@@ -22,8 +16,9 @@ namespace MarvellousPoker.Controllers.Adjuvants
                 WriteLine($"\tSomething went wrong: {e.Message}\n{e.StackTrace}");
             }
 
+            //TODO 01/15/2022: some defect pushed his way through the NumberValue extracting
             return attrs?.Length > 0
-                ? (attrs[0].StringValue, attrs[0].LongValue)
+                ? (attrs[0].StringValue, attrs[0].NumberValue)
                 : (default, default);
         }
     }

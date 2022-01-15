@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MarvellousPoker.Controllers.Adjuvants
+﻿namespace MarvellousPoker.Controllers.Adjuvants
 {
     public static class EventHandlerExtentions
     {

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
-namespace MarvellousPoker.Models.Abstractions
+﻿namespace MarvellousPoker.Models.Abstractions
 {
     public interface IDeck
     {

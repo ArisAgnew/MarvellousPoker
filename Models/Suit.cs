@@ -1,6 +1,4 @@
-﻿using MarvellousPoker.Controllers.Adjuvants;
-
-namespace MarvellousPoker.Models
+﻿namespace MarvellousPoker.Models
 {
     public enum Suit : ushort
     {

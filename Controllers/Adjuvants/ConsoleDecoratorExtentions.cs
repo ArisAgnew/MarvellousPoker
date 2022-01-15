@@ -1,9 +1,4 @@
-﻿using System;
-
-using static System.Console;
-using static System.ConsoleColor;
-
-namespace MarvellousPoker.Controllers.Adjuvants
+﻿namespace MarvellousPoker.Controllers.Adjuvants
 {
     public static class ConsoleDecoratorExtentions
     {

@@ -1,8 +1,4 @@
-﻿using System;
-
-using static System.DateTime;
-
-namespace MarvellousPoker.Controllers.Adjuvants
+﻿namespace MarvellousPoker.Controllers.Adjuvants
 {
     public static class CacheExtentionsTrial
     {

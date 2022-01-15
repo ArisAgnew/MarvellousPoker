@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using static System.String;
-
-namespace MarvellousPoker.Controllers.Adjuvants
+﻿namespace MarvellousPoker.Controllers.Adjuvants
 {
     internal static class PotentialNullValueExtentions
     {
-        private static readonly string EXCEPTION_MESSAGE = "{0} has null value.";
+        private const string EXCEPTION_MESSAGE = "{0} has null value.";
 
         internal static T MightBeNullOrDefault<T>(this T adjacentType, string message = default) =>
             adjacentType switch

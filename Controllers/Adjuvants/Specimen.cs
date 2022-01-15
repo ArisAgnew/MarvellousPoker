@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using static System.AttributeTargets;
+﻿using static System.AttributeTargets;
 
 namespace MarvellousPoker.Controllers.Adjuvants
 {
