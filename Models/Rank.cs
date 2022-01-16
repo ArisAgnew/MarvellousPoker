@@ -1,7 +1,7 @@
 ﻿namespace MarvellousPoker.Models
 {
     [Flags]
-    public enum Rank : ushort
+    public enum Rank : byte
     {
         [Description("\x32")] TWO = 0x02,
         [Description("\x33")] THREE = 0x03,

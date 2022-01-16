@@ -1,13 +1,13 @@
 ﻿namespace MarvellousPoker.Models
 {
     [Flags]
-    public enum GameAction : ushort
+    public enum GameAction : byte
     {
-        DEALOUT = 0,
-        PREFLOP = 1,
-        FLOP = 2,
-        TURN = 4,
-        RIVER = 8,
-        SHOWDOWN = 16
+        DEALOUT = 0x00,
+        PREFLOP = 0x01,
+        FLOP = 0x02,
+        TURN = 0x04,
+        RIVER = 0x08,
+        SHOWDOWN = 0x10
     }
 }
